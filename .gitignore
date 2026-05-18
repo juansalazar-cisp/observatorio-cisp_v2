@@ -1,0 +1,16 @@
+# Ignorar la carpeta de dependencias (Lo que pediste)
+node_modules/
+
+# --- Buenas prácticas para proyectos de Node (Opcional, bórralo si no lo deseas) ---
+# Ignorar archivos de logs de errores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar archivos de variables de entorno (Contienen contraseñas o llaves API)
+.env
+.env.local
+
+# Ignorar carpetas de compilación o producción (Si usas TypeScript, React, etc.)
+dist/
+build/

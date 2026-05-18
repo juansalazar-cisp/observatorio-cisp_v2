@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\src\\\\components\\\\maps\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\src\\\\pages\\\\VisualizacionConsulta\")",
+      "PowerShell(Invoke-WebRequest -Uri \"https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json\" -OutFile \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\public\\\\colombia-geo.json\" -UseBasicParsing)",
+      "PowerShell($json = Get-Content \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\public\\\\colombia-geo.json\" -Raw | ConvertFrom-Json; $json.features[0].properties; Write-Output \"---\"; Write-Output \"Total features: $\\($json.features.Count\\)\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\src\\\\pages\\\\MiPlanDeVida\\\\PlanDetalle\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\" -File | Where-Object { $_.Name -match '^\\\\.' -or $_.Name -match '\\\\.\\(json|js|config\\)$' })",
+      "Bash(npm run *)",
+      "Bash(mkdir \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\public\\\\data\" 2>nul; echo done)",
+      "Bash(Remove-Item \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\public\\\\save-data.php\")",
+      "Bash(del \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\public\\\\save-data.php\")",
+      "Bash(npm install *)",
+      "Bash(cd /mnt/c/Users/jcsal/OneDrive/Documentos/dev/observatorio_cisp_v2/obsertorio_tejiendoterritorios && npm install @fontsource/fraunces 2>&1 | tail -5)",
+      "Read(//mnt/c/Users/jcsal/OneDrive/Documentos/dev/observatorio_cisp_v2/**)",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\obsertorio_tejiendoterritorios\\\\src\\\\pages\\\\SobreElConvenio\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\obsertorio_tejiendoterritorios\\\\src\\\\pages\\\\TejiendoTrayectorias\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\obsertorio_tejiendoterritorios\\\\src\\\\pages\\\\IniciativasComunitarias\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\obsertorio_tejiendoterritorios\\\\src\\\\pages\\\\IndiceCulturaEducacion\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\obsertorio_tejiendoterritorios\\\\src\\\\components\\\\common\")",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\obsertorio_tejiendoterritorios\\\\dist\" -Recurse -File | Where-Object { $_.Extension -eq \".json\" -or $_.Extension -eq \".php\" -or $_.Extension -eq \".htaccess\" } | Select-Object FullName)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\jcsal\\OneDrive\\Documentos\\dev\\observatorio_cisp_v2\\observatorio_planesdevida",
+      "C:\\Users\\jcsal\\OneDrive\\Documentos\\dev\\observatorio_cisp_v2\\obsertorio_tejiendoterritorios"
+    ]
+  }
+}

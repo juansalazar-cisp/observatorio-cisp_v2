@@ -1,0 +1,49 @@
+Tejiendo Territorios
+barra tipo windows con los accesos con iconoc y texto
+Principal:
+	- Titulo y explicacion inicial - desde documento
+	- Que es una Iniciativa:
+		- Iniciativas de acuerdo
+		- Iniciativas de fortalecimiento
+	- galeria de fotos replicar la de planes de vida
+- Cuatro accesos:
+	- Sobre el Convenio:
+		- Caracteristicas del convenio: Texto y video
+		- Papel del ministerio: Texto y video
+		- Papael del CISP como ONG: Texto y video
+		Tres botones alineados:
+			- Preguntas frecuentes: boton que lleva a popup con texto y un pdf descargable
+			- Informes parciales: boton que lleva a popup con texto y un pdf descargable
+			- Documentos de interes: popup con lista de documentos desde json
+	- Tejiendo trayectorias:
+		- seccion con Definicion de iniciativa de acuerdo y de interes
+		- Dashboard con resumen de iniciativa e indicadores: Iniciativa, tipo de iniciativa, linea de intervencion y relacion con ODS: sale del Gone; el Dashboard lleva texto con contexto
+		- Filtro de consulta de iniciativas (95): Inicialmente se ve tres columnas con nombre de iniciativa - Organizacion y al pasar el mouse se abre una tarjeta con la informacion; Cada iniciativa lleva una tarjeta con foto pequeña, debajo nombre iniciativa, linea, nombre comunidad, Descripcion
+	- Inicitivas Comunitarias:
+		- Incidencia territorial del convenio: mapa dinamico por departamentos, al tocar uno se abre popup con cantidad de iniciativa, municipios y pueblos indigenas
+		- Seccion con resumen ejecutivo de iniciativas con texto de tres parrafos con una imagen, se tiene un boton que lleva a los micro-sitios de 95 iniciativas, debe llevar a una nueva pagina: 
+		- titulo reutilizado
+		- Introduccion: texto en documento
+		- 96 tarjetas de las iniciativas en cada iniciativa:
+			- Con administracion como planes de vida
+			- titulo reutilizado con foto inicial en tarjetas - foto edi
+			- Modulos:
+				- Tejiendo mi territorio:
+					- Titulo
+					- Mapa estatico de la iniciativa con georreferenciacion con zoom; agregar texto detalle
+					- seccion: realidades territoriales: descripcion y pdf descargable.
+				- tejiendo mis saberes: replicar modulo: fortalecimiento comunitario de Planes de vida, el titulo sera Estanteria virtual
+				- Tejiendo mi memoria:
+					- seccion: La memoria como eje estructurante del territorio: con texto resumen d ela importancia de la memoria para el territorio y acceso a descargar el pdf diseñado por comunicaciones
+					- seccion: Como gestiono mi territorio y mi memoria:
+						- replicar graficas por dimenciones y cuellos de botella de excel.
+					- seccion: el camino a transitar: descripcion breve y documento descargable con ruta d emejora
+				- entretejiendo caminos:
+					- Seccion: Resumen de la iniciativa con infografia (imagen)
+					- seccion: Seguimiento y evaluacion de la iniciativa: Descripcion de loque se evalua y debajo Matriz (tabla) con diseño bonito
+					- Seccion con dos botones: Ficha tenica inicial, informe tecnico final - edi; todos los lleva a PDF descargables
+				- tejidos que transforman:
+					- Seccion: Porque y para que mi iniciativa: video - edi (subir video)
+					- seccion: Herramientas: Lista de documentos descargables diseñado con icono y texto desde json: Matriz, formato, tabla de retencion documental, esquema de manejo de archivo y variables del indice; documentos desde drive - edi (subir o eliminar documentos)
+					- seccion rememoro el proceso: descargable de informe final y linea de tiempo con tiempos de ejecución de iniciativa: partiendo de fecha inicio y 5 hitos o momentos: tomado desde json con informacion de fichas
+	- Indice de cultura y educacion: en construccion, crear el espacio
