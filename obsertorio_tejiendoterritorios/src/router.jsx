@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter } from 'react-router-dom';
 import MainLayout               from './layout/MainLayout';
 import Home                     from './pages/Home';
 import VisualizacionConsulta    from './pages/VisualizacionConsulta';
@@ -42,10 +42,12 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes, {
-  basename: import.meta.env.PROD
-    ? '/obsertorio-tejiendoterritorios'
-    : '/tejiendo-territorios',
-});
+const router = __LOCAL_BUILD__
+  ? createHashRouter(routes)
+  : createBrowserRouter(routes, {
+      basename: import.meta.env.PROD
+        ? '/obsevatorio-tejiendoterritorios'
+        : '/tejiendo-territorios',
+    });
 
 export default router;

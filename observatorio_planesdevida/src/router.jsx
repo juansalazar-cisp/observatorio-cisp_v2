@@ -21,7 +21,18 @@ import OrgMiPlanDeVida        from './pages/OrganizacionDetalle/OrgMiPlanDeVida'
 import OrgFortalecimiento     from './pages/OrganizacionDetalle/OrgFortalecimiento';
 import OrgTejiendoCaminos     from './pages/OrganizacionDetalle/OrgTejiendoCaminos';
 import OrgArchivoVivo         from './pages/OrganizacionDetalle/OrgArchivoVivo';
+import { lazy, Suspense } from 'react';
+import { CircularProgress, Box } from '@mui/material';
+const OrgGestionIndicadores = lazy(() => import('./pages/OrganizacionDetalle/OrgGestionIndicadores'));
 import NotFound from './pages/NotFound';
+
+function LazyPage({ component: Component }) {
+  return (
+    <Suspense fallback={<Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}><CircularProgress /></Box>}>
+      <Component />
+    </Suspense>
+  );
+}
 
 const router = createBrowserRouter(
   [
@@ -50,6 +61,7 @@ const router = createBrowserRouter(
         { path: 'org/:slug/fortalecimiento',             element: <OrgFortalecimiento /> },
         { path: 'org/:slug/tejiendo-caminos',            element: <OrgTejiendoCaminos /> },
         { path: 'org/:slug/archivo-vivo',                element: <OrgArchivoVivo /> },
+        { path: 'org/:slug/gestion-indicadores',         element: <LazyPage component={OrgGestionIndicadores} /> },
         { path: '*',                         element: <NotFound /> },
       ],
     },

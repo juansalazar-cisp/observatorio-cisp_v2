@@ -1,7 +1,46 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "PowerShell(Head -50)",
+      "Bash(ls -la \"/mnt/c/Users/jcsal/OneDrive/Documentos/dev/observatorio_cisp_v2/observatorio_victimas/src/assets/\" 2>/dev/null || echo \"carpeta vacía o no accesible\")",
+      "Read(//mnt/c/Users/jcsal/OneDrive/Documentos/dev/observatorio_cisp_v2/observatorio_victimas/src/**)",
+      "Bash(ls \"/mnt/c/Users/jcsal/OneDrive/Documentos/dev/observatorio_cisp_v2/observatorio_victimas/\")",
+      "Read(//mnt/c/Users/jcsal/OneDrive/Documentos/dev/observatorio_cisp_v2/**)",
+      "Bash(ls \"C:/Users/jcsal/OneDrive/Documentos/dev/observatorio_cisp_v2/\" 2>/dev/null || ls \"C:/Users/jcsal/OneDrive/Documentos/dev/\")",
+      "Read(//c/Users/jcsal/OneDrive/Documentos/dev/**)",
+      "Bash(node -e \"const fs=require\\('fs'\\); const g=JSON.parse\\(fs.readFileSync\\('public/colombia-geo.json','utf8'\\)\\); const f=g.features[0]; console.log\\('type:', g.type\\); console.log\\('features:', g.features.length\\); console.log\\('first props:', JSON.stringify\\(f.properties\\)\\); console.log\\('geometry type:', f.geometry.type\\);\")",
+      "PowerShell(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_victimas\\\\public\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_planesdevida\\\\public\\\\colombia-geo.json\" -Destination \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_victimas\\\\public\\\\colombia-geo.json\")",
+      "PowerShell($g = Get-Content \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_victimas\\\\public\\\\colombia-geo.json\" | ConvertFrom-Json; $f = $g.features[0]; Write-Output \"Features: $\\($g.features.Count\\)\"; Write-Output \"Properties: $\\($f.properties | ConvertTo-Json -Compress\\)\")",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_victimas\\\\dist\\\\\" -Name | Select-Object -First 10; Write-Output \"---\"; \\(Get-ChildItem \"C:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\observatorio_victimas\\\\dist\\\\\" -Recurse | Measure-Object -Property Length -Sum\\).Sum / 1MB | ForEach-Object { \"{0:N1} MB total\" -f $_ })",
+      "Bash(python -c ' *)",
+      "Bash(Select-Object Name)",
+      "Bash(python -c \"import docx; print\\('python-docx ok'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -m pip install python-docx)",
+      "Bash(\"C:\\\\Users\\\\jcsal\\\\AppData\\\\Local\\\\Python\\\\pythoncore-3.14-64\\\\python.exe\" -c \"import docx; print\\('ok'\\)\")",
+      "Bash(\"C:\\\\Users\\\\jcsal\\\\AppData\\\\Local\\\\Python\\\\pythoncore-3.14-64\\\\python.exe\" \"c:\\\\Users\\\\jcsal\\\\OneDrive\\\\Documentos\\\\dev\\\\observatorio_cisp_v2\\\\generar_doc.py\")",
+      "Bash(npm install *)",
+      "Bash(node -e \"require.resolve\\('recharts'\\); console.log\\('recharts ok'\\)\")",
+      "Bash(node -e \"require.resolve\\('jspdf'\\); console.log\\('jspdf ok'\\)\")",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(curl -s \"http://localhost:5173/observatorio-planesdevida/\")",
+      "Bash(node -e \"const jspdf = require\\('jspdf'\\); console.log\\(Object.keys\\(jspdf\\)\\)\")",
+      "Bash(curl -s \"http://localhost:5173/observatorio-planesdevida/src/router.jsx\")",
+      "Bash(curl -s \"http://localhost:5173/observatorio-planesdevida/src/pages/OrganizacionDetalle/OrgGestionIndicadores/index.jsx\")",
+      "Bash(curl -s \"http://localhost:5173/observatorio-planesdevida/node_modules/.vite/deps/recharts.js?v=8595ce73\")",
+      "Bash(curl -sI \"http://localhost:5173/observatorio-planesdevida/node_modules/.vite/deps/recharts.js\")",
+      "Bash(node -e ' *)",
+      "Bash(python -c \"import json,sys; p=json.load\\(sys.stdin\\); print\\('peerDeps:', p.get\\('peerDependencies',{}\\)\\); print\\('react:', p.get\\('peerDependencies',{}\\).get\\('react','?'\\)\\)\")",
+      "Bash(curl -s \"http://localhost:5173/observatorio-planesdevida/src/main.jsx\")",
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -s \"http://localhost:5174/observatorio-planesdevida/src/pages/OrganizacionDetalle/OrgGestionIndicadores/index.jsx\")",
+      "Bash(curl -s \"http://localhost:5174/observatorio-planesdevida/node_modules/.vite/deps/html2canvas.js\")",
+      "Bash(curl -s \"http://localhost:5175/observatorio-planesdevida/src/router.jsx\")",
+      "Bash(grep -v \"//\\\\|preamble\")",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)"
     ]
   }
 }

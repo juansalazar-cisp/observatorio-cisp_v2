@@ -8,6 +8,8 @@ import MenuBookIcon         from '@mui/icons-material/MenuBook';
 import PictureAsPdfIcon     from '@mui/icons-material/PictureAsPdf';
 import OpenInNewIcon        from '@mui/icons-material/OpenInNew';
 import DownloadIcon         from '@mui/icons-material/Download';
+import AssessmentIcon       from '@mui/icons-material/Assessment';
+import ArrowForwardIcon     from '@mui/icons-material/ArrowForward';
 
 import { useOrgData } from '../../../utils/orgData';
 import fondo2         from '../../../assets/fondo2.png';
@@ -99,20 +101,46 @@ export default function OrgMiPlanDeVida() {
         </Box>
       </Paper>
 
-      {/* Plan de vida final */}
+      {/* Mi Plan de Vida */}
       <Box sx={{ mb: 5 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
           <Box sx={{ width: 4, height: 32, borderRadius: 2, bgcolor: color }} />
-          <Typography variant="h5" sx={{ fontFamily: '"Alegreya Sans", serif', fontWeight: 700 }}>Plan de vida final</Typography>
+          <Typography variant="h5" sx={{ fontFamily: '"Alegreya Sans", serif', fontWeight: 700 }}>Mi Plan de Vida</Typography>
         </Box>
-        <TarjetaDescargaPdf
-          icono={<MenuBookIcon sx={{ color, fontSize: 26 }} />}
-          titulo={org.planDeVidaFinal?.nombre || 'Plan de vida final'}
-          subtitulo="Documento completo en PDF"
-          color={color}
-          disponible={Boolean(org.planDeVidaFinal?.url)}
-          href={org.planDeVidaFinal?.url || undefined}
-        />
+        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'stretch' }}>
+          <TarjetaDescargaPdf
+            icono={<MenuBookIcon sx={{ color, fontSize: 26 }} />}
+            titulo={org.planDeVidaFinal?.nombre || 'Plan de vida final'}
+            subtitulo="Documento completo en PDF"
+            color={color}
+            disponible={Boolean(org.planDeVidaFinal?.url)}
+            href={org.planDeVidaFinal?.url || undefined}
+          />
+          {/* Gestión de Indicadores */}
+          <Card elevation={0} sx={{ border: `1.5px solid ${color}40`, borderRadius: 2.5, width: 160 }}>
+            <CardActionArea onClick={() => navigate(`/org/${slug}/gestion-indicadores`)} sx={{ p: 2.5, height: '100%' }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1.5, textAlign: 'center' }}>
+                <Box sx={{ width: 52, height: 52, borderRadius: 2, bgcolor: `${color}15`, border: `2px solid ${color}35`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <AssessmentIcon sx={{ color, fontSize: 26 }} />
+                </Box>
+                <Box>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 700, color, mb: 0.25, fontSize: '0.8rem' }}>
+                    Gestión de Indicadores
+                  </Typography>
+                  <Typography variant="caption" color="text.secondary" sx={{ display: 'block', lineHeight: 1.3 }}>
+                    8 indicadores · 40 variables
+                  </Typography>
+                </Box>
+                <Chip
+                  label="Abrir"
+                  size="small"
+                  icon={<ArrowForwardIcon sx={{ fontSize: '0.7rem !important' }} />}
+                  sx={{ fontSize: '0.65rem', height: 20, bgcolor: `${color}15`, color, fontWeight: 700 }}
+                />
+              </Box>
+            </CardActionArea>
+          </Card>
+        </Box>
       </Box>
 
       <Divider sx={{ mb: 5 }} />

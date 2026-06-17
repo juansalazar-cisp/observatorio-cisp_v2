@@ -1,0 +1,30 @@
+Principal
+- Detalle observatorio
+- Comprendiendo la reparación: Texto de victimas, explicacion ley 1448 y decreto reglamentarios
+- Información explicativa sobre conflicto armado y victimización
+- Explicación de verdad, justicia, reparación y garantías de no repetición
+	- Enfasis especifico en la indemnizacion administrativa, la cual se encuentra dentro del derecho de reparacion. 
+	- Explicación de medidas de reparación y alcance de la indemnización
+	- Visualización de etapas, actores y trámites del proceso
+- Glosario
+	- Alcance operativo y territorial del convenio
+	- Enlaces a unidad de victimas UARIV (Unidad de atencion y reparacion integral a las victimas)
+	- Enlace unidad de victimas
+	- Centro nacional de memoria historica
+- Modulos (5) - Graficos por departamento con la informacion segun el modulo
+	- Radiografica del acceso
+		- Mapa por departamentos, altocar un deparamento al lado derecho mostrar: cantidad de victimas por departamento, hechos victimizantes en cada departamento; resaltar con un color verde claro los hechos para reparacion por via administrativa, cada hecho debe tener un icono para ver en popup la explicaicon del hecho victimizante.
+		- Dashboard con Informacion sobre requerimientos documentales, en que departamentospiden han reclamado, no han reclamado, si ahn cobrado o no
+	- Barreras desde el territorio (dificultades que se presentan para el cobro o reclamacion d elas victimas)
+		- tarjetas con epxlicacion de la sbarreras:
+			- Geograficas
+			- Adminsitartivas
+			- Sociales
+			- De informacion
+		- Dashboard dinamico con el comportamiento de estas barreras en los departamentos
+	- La mirada desde las victimas
+		- Dashboard replciado de Barreras desde el territorio con informaicon desde las victimas
+	- Trayectorias de contactabilidad y localizacion
+		- 
+	- Dinamicas operativas Territoriales
+

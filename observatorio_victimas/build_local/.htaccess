@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /observatorio-victimas/
+
+  # No reescribir archivos o directorios que existen físicamente
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Todo lo demás → index.html (React Router se encarga del ruteo)
+  RewriteRule ^ index.html [L]
+</IfModule>

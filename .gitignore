@@ -14,3 +14,7 @@ yarn-error.log*
 # Ignorar carpetas de compilación o producción (Si usas TypeScript, React, etc.)
 dist/
 build/
+
+# Ignorar .md y claude
+.md
+.claude
